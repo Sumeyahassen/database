@@ -19,5 +19,17 @@ CREATE TABLE office (
 SELECT firstname, lastname, email, employe.officecode 
 FROM employe
 INNER JOIN office 
-    ON office.officecode = employe.officecode;
-    
+   ON office.officecode = employe.officecode;
+--     Question 2 🛍️
+-- Write an SQL query to get the productName, productVendor, and productLine from the products table.
+-- Use a LEFT JOIN to combine the products table with the productlines table using the productLine column.
+ CREATE TABLE prodact (
+ prodactname VARCHAR(100),
+ prodactvender VARCHAR(100),
+ prodactline VARCHAR(100));
+ CREATE TABLE productlines(
+ prodactline VARCHAR(100));
+ SELECT prodactname,prodactvender,prodact.prodactline 
+ FROM  prodact
+ LEFT JOIN prodactlines
+ ON prodact.prodactline=prodact.prodactline;
