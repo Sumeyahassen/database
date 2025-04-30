@@ -33,3 +33,18 @@ INNER JOIN office
  FROM  prodact
  LEFT JOIN prodactlines
  ON prodact.prodactline=prodact.prodactline;
+--  Question 3 📦
+-- Write an SQL query to retrieve the orderDate, shippedDate, status, and customerNumber for the first 10 orders.
+-- Use a RIGHT JOIN to combine the customers table with the orders table using the customerNumber column.
+ CREATE TABLE orders(
+ orderdate DATE ,
+ shippeddate DATE,
+ states VARCHAR(100),
+ custemernumber INT);
+ CREATE TABLE custemer(
+  custemernumber int);
+  SELECT *FROM orders 
+  RIGHT JOIN custemer
+  ON custemer. custemernumber=orders. custemernumber
+WHERE   custemernumber <=10;
+  
